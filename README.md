@@ -287,6 +287,15 @@ Issues and pull requests welcome. Keep in mind:
   `Color.brandDown`, `Color.delta(_:)`) and dynamic price formatter
   (`Formatters.price`, 5-sig-fig Hyperliquid rule).
 - Run `xcodegen generate` after changes to `project.yml`.
+- Run **SwiftLint** before opening a PR:
+  ```bash
+  brew install swiftlint
+  swiftlint                     # at the repo root
+  ```
+  The project ships a `.swiftlint.yml` tuned for this codebase (the
+  Hyperliquid wire format's one-letter field names — `t`, `T`, `o`,
+  `c`, `h`, `l`, `v`, `r`, `s` — are allowlisted so `identifier_name`
+  doesn't flag them).
 
 ## Acknowledgements
 

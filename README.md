@@ -22,6 +22,7 @@ perp orders signed locally by an on-device agent key.
 - [WebSocket channels used](#websocket-channels-used)
 - [Security notes](#security-notes)
 - [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ## Features
@@ -286,6 +287,26 @@ Issues and pull requests welcome. Keep in mind:
   `Color.brandDown`, `Color.delta(_:)`) and dynamic price formatter
   (`Formatters.price`, 5-sig-fig Hyperliquid rule).
 - Run `xcodegen generate` after changes to `project.yml`.
+
+## Acknowledgements
+
+UI and UX ideas were cribbed, in good faith and without any association,
+from a few exchanges whose mobile apps are best-in-class:
+
+- **[Hyperliquid](https://hyperliquid.xyz)** — the source of truth for the
+  protocol itself, and the reference for the trade flow, the agent-key
+  model, and the colour language (teal for bids, pink for asks).
+- **[Binance](https://binance.com)** — the Home screen's balance hero card,
+  the quick-ticker grid, and the Hot / Gainers / Losers / Volume tab strip
+  follow the pattern set by the Binance app.
+- **[Bitget](https://bitget.com)** — the full-page chart detail, the
+  category strip on Markets, the dense position-history card, and the
+  underline-style sub-tabs on Trade are all directly inspired by Bitget's
+  mobile layout.
+
+Nothing is copied asset-for-asset; this is a clean-room SwiftUI
+reimplementation. If you represent any of the above and something in here
+crosses a line, please [open an issue](https://github.com/mtf-exchange/hyperliquid-ios/issues).
 
 ## License
 

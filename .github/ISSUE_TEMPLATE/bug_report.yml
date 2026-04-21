@@ -1,0 +1,74 @@
+name: Bug report
+description: Something is broken, crashing, or rendering wrong data.
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file this! A focused reproduction is
+        worth more than a long description.
+
+        **Security issues — wrong orders being placed, lost funds, signing
+        bypass, etc. — do not file here.** Please open an advisory under
+        the repo's Security tab instead.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What went wrong
+      description: A crisp sentence or two.
+      placeholder: |
+        The Trade tab shows an empty Positions list even though I have an
+        open BTC position on Hyperliquid web.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Numbered list. If the bug needs a specific wallet state (a position, a balance, a HIP-3 deployer), mention it.
+      placeholder: |
+        1. Launch the app fresh (delete + reinstall if easier)
+        2. Connect MetaMask on Arbitrum One
+        3. Enable trading
+        4. Go to Trade tab
+        5. Positions list is empty
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      placeholder: The BTC position should render with entry, mark, liq, and PnL.
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / OS / Xcode
+      placeholder: iPhone 15 Pro · iOS 17.5 · Xcode 15.4
+
+  - type: input
+    id: commit
+    attributes:
+      label: App commit or version
+      description: Commit SHA from `git log -1`, or the App Store build number if you ever publish.
+      placeholder: e22ba6d
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Xcode console log
+      description: Paste the `[ws]` / `[socket]` / crash lines. If none, say "none".
+      render: shell
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network
+      options:
+        - mainnet
+        - testnet
+      default: 0

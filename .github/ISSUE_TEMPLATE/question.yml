@@ -1,0 +1,25 @@
+name: Question
+description: Ask how to build, configure, or integrate.
+title: "[q] "
+labels: ["question", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you're asking about the Hyperliquid protocol itself (field
+        names, endpoint shapes, signing rules), the
+        [Hyperliquid docs](https://hyperliquid.gitbook.io/hyperliquid-docs)
+        will answer most questions faster than we can.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you've tried
+      description: Docs you've read, code paths you've inspected, etc.

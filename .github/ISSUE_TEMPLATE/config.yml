@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Hyperliquid protocol docs
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs
+    about: Protocol-level questions (endpoint shapes, signing rules, HIP-3) belong upstream.
+  - name: Reown / WalletConnect Swift
+    url: https://github.com/reown-com/reown-swift/issues
+    about: WalletConnect SDK bugs — session storage, deep links, EIP-712 handling.
+  - name: Report a security issue privately
+    url: https://github.com/mtf-exchange/hyperliquid-ios/security/advisories/new
+    about: Signing bypasses, wrong-order bugs, or lost-fund risk. Please don't file public issues for these.
